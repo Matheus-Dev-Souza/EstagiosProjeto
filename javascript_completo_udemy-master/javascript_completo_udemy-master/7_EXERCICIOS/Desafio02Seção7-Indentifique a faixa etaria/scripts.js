@@ -1,7 +1,15 @@
-function soma(num1, num2, num3){
-  return num1 + num2 + num3;
+function faixaEtaria(idade){
+  if (idade < 12){
+    return 'Criança';
+  } else if (idade >= 12 && idade <= 24){
+    return 'Jovem';
+  } else {
+    return 'Adulto';
+  }
 }
 
-const resultado = soma(5, 10, 15);
+const crianca = faixaEtaria(8);
+const adulto = faixaEtaria(30);
 
-console.log(resultado);
+console.log(crianca);
+console.log(adulto);
