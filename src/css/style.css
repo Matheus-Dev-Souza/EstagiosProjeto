@@ -1,25 +1,71 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    padding-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 form {
-    margin-bottom: 20px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
 }
 
 label {
-    display: inline-block;
-    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 button {
-    margin-right: 10px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 10px;
 }
+
+button:last-child {
+    margin-right: 0;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
 
 #criar-btn {
     background-color: #4CAF50;
@@ -27,13 +73,23 @@ button {
 }
 
 #consultar-btn {
-    background-color: #2196F3; 
+    background-color: #2196F3;
     color: white;
 }
 
 #deletar-btn {
     background-color: #f44336;
     color: white;
+}
+
+#listar-btn {
+    background-color: #e28c0b;
+    color: white;
+}
+
+#atualizar-btn {
+    background-color: #FFEB3B;
+    color: black;
 }
 
 #criar-btn:hover {
@@ -48,6 +104,69 @@ button {
     background-color: #da190b;
 }
 
+#listar-btn:hover {
+    background-color: #de890a;
+}
+
+#atualizar-btn:hover {
+    background-color: #e0c400;
+}
+
+button.listar-deletar-btn {
+    background-color: #f44336; /* Cor vermelha para o botão de deletar na listagem */
+    color: white;
+}
+button.listar-editarCadastro-btn{
+    background-color: #ff9c07; /* Cor vermelha para o botão de deletar na listagem */
+    color: white;
+}
+
+
 #result {
     margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+#result div {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#result p {
+    margin: 5px 0;
+}
+
+.cadastro-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cadastro-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.cadastro-item .delete-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.cadastro-item button:hover {
+    opacity: 0.7;
 }

@@ -1,4 +1,4 @@
-export function CadastroFactory() { 
+export function CadastroFactory() {
     return {
         criarCadastro: function(nome, dataNascimento, telefone, email) {
             console.log('Criando cadastro com:', nome, dataNascimento, telefone, email);
